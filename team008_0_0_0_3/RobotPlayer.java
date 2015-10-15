@@ -1,4 +1,4 @@
-package team008_0_0_0_2;
+package team008_0_0_0_3;
 
 import battlecode.common.Direction;
 import battlecode.common.GameActionException;
@@ -17,8 +17,10 @@ public class RobotPlayer {
 		BaseRobot robot = null;
 		switch (rc.getType()) {
 		case ARTILLERY:
+			robot = new Artillery(rc);
 			break;
 		case GENERATOR:
+			robot = new Generator(rc);
 			break;
 		case HQ:
 			robot = new HQ(rc);
